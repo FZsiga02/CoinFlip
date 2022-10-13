@@ -1,18 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/heads"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/kep"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kep"
+        android:gravity="center"
+        android:id="@+id/linear"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FEJ"
+            android:id="@+id/fej"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÍRÁS"
+            android:id="@+id/iras"/>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/linear"
+        android:text="Dobások: "
+        android:textSize="30sp"
+        android:id="@+id/dobasok"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_toRightOf="@+id/dobasok"
+        android:text="0"
+        android:textSize="30sp"
+        android:id="@+id/dobasCounter"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dobasok"
+        android:text="Győzelem: "
+        android:textSize="30sp"
+        android:id="@+id/gyozelem" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dobasCounter"
+        android:layout_toRightOf="@+id/gyozelem"
+        android:text="0"
+        android:textSize="30sp"
+        android:id="@+id/gyozelemCounter"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gyozelem"
+        android:text="Vereség: "
+        android:textSize="30sp"
+        android:id="@+id/vereseg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gyozelemCounter"
+        android:layout_toRightOf="@+id/vereseg"
+        android:text="0"
+        android:textSize="30sp"
+        android:id="@+id/veresegCounter"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+
+
+
